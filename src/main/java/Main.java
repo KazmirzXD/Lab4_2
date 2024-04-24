@@ -7,9 +7,6 @@ class Main {
       Service s = new Service();
       Scanner scanner = new Scanner(System.in);
 
-      s.addStudent(new Student("Krzysztof", 20));
-      s.addStudent(new Student("Janusz", 40));
-
       System.out.println("Wybierz opcje:");
       System.out.println("1 - Dodaj");
       System.out.println("2 - Wypisz studentów");
