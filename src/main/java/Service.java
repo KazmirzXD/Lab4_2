@@ -29,6 +29,20 @@ public class Service {
     reader.close();
     return ret;
   }
+  public Student findStudentByLastName(String lastName)
+  {
+    try {
+      Collection<Student> students = getStudents();
+      for (Student student : students) {
+        if (student.getNazwisko().equals(lastName)) {
+          return student;
+        }
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
 
   public Student findStudentByName(String name) {
 
