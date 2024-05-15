@@ -1,6 +1,3 @@
-TakKrzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-karol 23
-ifuf 234
+jan 22
+karol 22 324235423 2
+kar 232 343254 534

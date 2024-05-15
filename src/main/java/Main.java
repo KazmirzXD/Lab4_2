@@ -1,7 +1,8 @@
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Collection;
 
-class Main {
+public class Main {
   public static void main(String[] args) {
     try {
       Service s = new Service();
@@ -19,12 +20,17 @@ class Main {
           String name = scanner.next();
           System.out.print("Wiek: ");
           int age = scanner.nextInt();
-          s.addStudent(new Student(name, age));
+          System.out.print("Pesel: ");
+          String pesel = scanner.next();
+          System.out.print("Rok studiowania: ");
+          int rok_studiowania = scanner.nextInt();
+          s.addStudent(new Student(name, age, pesel, rok_studiowania));
           break;
         case 2:
-          var students = s.getStudents();
+          System.out.println("Lista studentów:");
+          Collection<Student> students = s.getStudents();
           for (Student current : students) {
-            System.out.println(current.ToString());
+            System.out.println(current.toString());
           }
           break;
         case 3:
@@ -35,7 +41,7 @@ class Main {
           System.out.println("Zły wybór.");
       }
     } catch (IOException e) {
-
+      e.printStackTrace();
     }
   }
 }
